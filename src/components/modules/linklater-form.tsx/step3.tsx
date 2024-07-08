@@ -28,7 +28,7 @@ function Step3Section() {
         classNames={{
           inputWrapper:
             "bg-white group-data-[focus-visible=true]:bg-white shadow-none rounded-full p-0",
-          input: "bg-white",
+          input: "bg-white text-black",
         }}
       />
       <Button className="bg-primaryBlue font-[Inter] font-[700] text-white text-[26px] w-[250px] h-[85px]">

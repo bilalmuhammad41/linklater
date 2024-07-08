@@ -86,7 +86,7 @@ function Step2Section() {
         classNames={{
           inputWrapper:
             "bg-white group-data-[focus-visible=true]:bg-white rounded-full p-0 shadow-none",
-          input: "bg-white ",
+          input: "bg-white text-black",
         }}
       />
     </div>

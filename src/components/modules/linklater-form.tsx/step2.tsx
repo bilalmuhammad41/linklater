@@ -82,11 +82,12 @@ function Step2Section() {
       </Tabs>
       <Input
         placeholder="Enter your own idea"
-        className="placeholder:text-[18px] rounded-full font-[Inter] max-w-[718px] py-3 px-5 bg-white group-data-[focus-visible=true]:bg-white border-1 border-black"
+        style={{ color: "#000" }}
+        className="placeholder:text-[18px] rounded-full font-[Inter] max-w-[718px] py-3 px-5 bg-white group-data-[focus-visible=true]:bg-white border-1 border-black "
         classNames={{
           inputWrapper:
             "bg-white group-data-[focus-visible=true]:bg-white rounded-full p-0 shadow-none",
-          input: "bg-white text-black",
+          input: "bg-white",
         }}
       />
     </div>

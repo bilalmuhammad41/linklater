@@ -24,6 +24,7 @@ function Step3Section() {
       </div>
       <Input
         placeholder="Enter phone number..."
+        style={{ color: "#000" }}
         className="placeholder:text-[18px] rounded-none font-[Inter] max-w-[718px] px-5 py-3 bg-white group-data-[focus-visible=true]:bg-white border-1 border-black"
         classNames={{
           inputWrapper:

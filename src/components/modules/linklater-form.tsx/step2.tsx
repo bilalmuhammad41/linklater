@@ -58,7 +58,7 @@ function Step2Section() {
             title={
               <div
                 role="button"
-                tabIndex={index}
+                tabIndex={0}
                 className={`${tab.titleClassname}`}
                 onClick={() => setSelected(tab.title)}
               >

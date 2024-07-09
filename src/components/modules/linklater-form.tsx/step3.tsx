@@ -20,14 +20,14 @@ function Step3Section() {
             Step 3
           </h3>
         </span>
-        <p className="md:text-[43px] sm:text-[35px] text-[30px] max-sm:leading-10 font-[Inter] text-primaryBlue font-extrabold">
+        <p className="md:text-[43px] sm:text-[35px] text-[25px] max-sm:leading-7 font-[Inter] text-primaryBlue font-extrabold">
           Enter your friend&apos;s phone number.
         </p>
       </div>
       <Input
         placeholder="Enter phone number..."
         style={{ color: "#000" }}
-        className="placeholder:text-[18px] rounded-none font-[Inter] max-w-[718px] px-5 py-3 bg-white group-data-[focus-visible=true]:bg-white border-1 border-black"
+        className="placeholder:text-[18px] rounded-none font-[Inter] max-w-[718px] px-5 sm:py-3 py-1 bg-white group-data-[focus-visible=true]:bg-white border-1 border-black"
         classNames={{
           inputWrapper:
             "bg-white group-data-[focus-visible=true]:bg-white shadow-none rounded-full p-0",
@@ -41,7 +41,7 @@ function Step3Section() {
         Your Linklater Has Been Sent!
       </p>
 
-      <div className=" md:max-w-[427px] h-[780px] sm:max-w-[400px] max-w-[350px] flex items-center justify-center relative ">
+      <div className=" md:max-w-[427px] md:h-[780px] sm:h-[680px] h-[450px] sm:max-w-[400px] max-w-[350px] flex items-center justify-center relative ">
         <div className="bg-primaryPink w-[300px] rounded-full h-[300px] blur-[200px] absolute"></div>
         <Image
           src={"/images/phone.png"}
@@ -49,7 +49,8 @@ function Step3Section() {
           height={756}
           alt="phone"
           quality={100}
-          className="md:max-w-[427px] sm:max-w-[400px] max-w-[350px] object-contain absolute"
+          unoptimized
+          className="md:max-w-[427px] sm:max-w-[350px] max-w-[250px] object-contain absolute"
         />
       </div>
     </div>

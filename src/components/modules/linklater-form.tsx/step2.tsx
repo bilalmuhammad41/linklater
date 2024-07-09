@@ -18,7 +18,7 @@ const tabsContent = [
   {
     title: "Link to watch the 2019 film Where'd You Go, Bernadette",
     titleClassname:
-      "flex md:gap-5 gap-2 items-center justify-center md:w-[620px] sm:w-[400px] max-sm:w-[300px]",
+      "flex md:gap-5 gap-2 items-center justify-center md:w-[620px] sm:w-[400px] max-sm:w-[315px]",
   },
 ];
 
@@ -33,7 +33,7 @@ function Step2Section() {
             Step 2
           </h3>
         </span>
-        <p className="md:text-[43px] sm:text-[35px] text-[30px] max-sm:leading-10 font-[Inter] text-primaryBlue font-extrabold">
+        <p className="md:text-[43px] sm:text-[35px] text-[25px] max-sm:leading-7 font-[Inter] text-primaryBlue font-extrabold">
           what kind of link do you want to have?
         </p>
       </div>
@@ -97,7 +97,7 @@ function Step2Section() {
       <Input
         placeholder="Enter your own idea"
         style={{ color: "#000" }}
-        className="placeholder:text-[18px] rounded-full font-[Inter] max-w-[718px] py-3 px-5 bg-white group-data-[focus-visible=true]:bg-white border-1 border-black "
+        className="placeholder:text-[18px] rounded-full font-[Inter] max-w-[718px] sm:py-3 py-1 px-5 bg-white group-data-[focus-visible=true]:bg-white border-1 border-black "
         classNames={{
           inputWrapper:
             "bg-white group-data-[focus-visible=true]:bg-white rounded-full p-0 shadow-none",

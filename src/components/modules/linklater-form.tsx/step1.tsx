@@ -11,7 +11,7 @@ function Step1Section() {
             Step 1
           </h3>
         </span>
-        <p className="md:text-[43px] sm:text-[35px] text-[30px] max-sm:leading-10 font-[Inter] text-primaryBlue font-extrabold">
+        <p className="md:text-[43px] sm:text-[35px] text-[25px] max-sm:leading-7 font-[Inter] text-primaryBlue font-extrabold">
           Select a photo of Richard Linklater.
         </p>
       </div>

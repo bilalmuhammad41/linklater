@@ -21,7 +21,7 @@ function Step3Section() {
           </h3>
         </span>
         <p className="md:text-[43px] sm:text-[35px] text-[30px] max-sm:leading-10 font-[Inter] text-primaryBlue font-extrabold">
-          Enter your friend's phone number.
+          Enter your friend&apos;s phone number.
         </p>
       </div>
       <Input

@@ -57,6 +57,8 @@ function Step2Section() {
             key={index}
             title={
               <div
+                role="button"
+                tabIndex={index}
                 className={`${tab.titleClassname}`}
                 onClick={() => setSelected(tab.title)}
               >
@@ -91,111 +93,6 @@ function Step2Section() {
             }
           ></Tab>
         ))}
-        {/* <Tab
-          className="bg-white px-0 rounded-full"
-          key={"1"}
-          title={
-            <div className="flex md:gap-5 gap-2 items-center w-[180px] max-sm:w-[130px] justify-center">
-              {selected ? (
-                <Image
-                  src={"/images/circle.svg"}
-                  width={28}
-                  height={28}
-                  alt={"circle"}
-                  className="group-data-[selected=true]:text-white  absolute"
-                />
-              ) : (
-                <div className="flex min-w-[28px] min-h-[28px] max-sm:min-w-[20px] max-sm:min-h-[20px] items-center justify-center relative">
-                  <Image
-                    src={"/images/circle-outer.svg"}
-                    width={28}
-                    height={28}
-                    alt={"circle"}
-                    className="group-data-[selected=true]:text-white  absolute"
-                  />
-                  <Image
-                    src={"/images/circle-inner.svg"}
-                    width={20}
-                    height={20}
-                    alt={"circle"}
-                    className="group-data-[selected=true]:text-white max-sm:max-w-[12px] max-sm:max-h-[12px]  absolute"
-                  />
-                </div>
-              )}
-              <h3>Link for a drink</h3>
-            </div>
-          }
-        ></Tab>
-        <Tab
-          className="bg-white px-0 rounded-full"
-          key={"2"}
-          title={
-            <div className="flex md:gap-5 gap-2 items-center w-[180px] max-sm:w-[130px] justify-center">
-              {selected ? (
-                <Image
-                  src={"/images/circle.svg"}
-                  width={28}
-                  height={28}
-                  alt={"circle"}
-                  className="group-data-[selected=true]:text-white  absolute"
-                />
-              ) : (
-                <div className="flex min-w-[28px] min-h-[28px] max-sm:min-w-[20px] max-sm:min-h-[20px] items-center justify-center relative">
-                  <Image
-                    src={"/images/circle-outer.svg"}
-                    width={28}
-                    height={28}
-                    alt={"circle"}
-                    className="group-data-[selected=true]:text-white  absolute"
-                  />
-                  <Image
-                    src={"/images/circle-inner.svg"}
-                    width={20}
-                    height={20}
-                    alt={"circle"}
-                    className="group-data-[selected=true]:text-white max-sm:max-w-[12px] max-sm:max-h-[12px]  absolute"
-                  />
-                </div>
-              )}
-              <h3>Link in the park</h3>
-            </div>
-          }
-        ></Tab>
-        <Tab
-          className="bg-white px-0 rounded-full"
-          key={"3"}
-          title={
-            <div className="flex md:gap-5 gap-2 items-center justify-center md:w-[620px] sm:w-[400px] max-sm:w-[300px]">
-              {selected ? (
-                <Image
-                  src={"/images/circle.svg"}
-                  width={28}
-                  height={28}
-                  alt={"circle"}
-                  className="group-data-[selected=true]:text-white  absolute"
-                />
-              ) : (
-                <div className="flex min-w-[28px] min-h-[28px] max-sm:min-w-[20px] max-sm:min-h-[20px] items-center justify-center relative">
-                  <Image
-                    src={"/images/circle-outer.svg"}
-                    width={28}
-                    height={28}
-                    alt={"circle"}
-                    className="group-data-[selected=true]:text-white  absolute"
-                  />
-                  <Image
-                    src={"/images/circle-inner.svg"}
-                    width={20}
-                    height={20}
-                    alt={"circle"}
-                    className="group-data-[selected=true]:text-white max-md:max-w-[12px] max-md:max-h-[12px]  absolute"
-                  />
-                </div>
-              )}
-              <h3>Link to watch the 2019 film Where’d You Go, Bernadette</h3>
-            </div>
-          }
-        ></Tab> */}
       </Tabs>
       <Input
         placeholder="Enter your own idea"

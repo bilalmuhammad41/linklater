@@ -1,15 +1,37 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Tab, Tabs } from "@nextui-org/tabs";
 import Image from "next/image";
 import { Input } from "@nextui-org/input";
 
+const tabsContent = [
+  {
+    title: "Link for a drink",
+    titleClassname:
+      "flex md:gap-5 gap-2 items-center w-[180px] max-sm:w-[130px] justify-center",
+  },
+  {
+    title: "Link in the park",
+    titleClassname:
+      "flex md:gap-5 gap-2 items-center w-[180px] max-sm:w-[130px] justify-center",
+  },
+  {
+    title: "Link to watch the 2019 film Where'd You Go, Bernadette",
+    titleClassname:
+      "flex md:gap-5 gap-2 items-center justify-center md:w-[620px] sm:w-[400px] max-sm:w-[300px]",
+  },
+];
+
 function Step2Section() {
+  const [selected, setSelected] = useState<string | null>("Link for a drink");
+  console.log(selected);
   return (
     <div className="flex w-full flex-col items-center gap-5 font-oswald uppercase px-5">
       <div className="w-full flex flex-col items-center gap-5 text-center px-5">
         <span className="px-8 py-1 rounded-full bg-primaryPink">
-          <h3 className="text-[30px] font-[700] text-black">Step 2</h3>
+          <h3 className="md:text-[30px] text-[20px] font-[700] text-black">
+            Step 2
+          </h3>
         </span>
         <p className="md:text-[43px] sm:text-[35px] text-[30px] max-sm:leading-10 font-[Inter] text-primaryBlue font-extrabold">
           what kind of link do you want to have?
@@ -20,8 +42,6 @@ function Step2Section() {
         color="default"
         className="w-min flex-wrapfont-[Inter] bg-transparent"
         classNames={{
-          // panel: "w-full",
-          // base: "w-min",
           cursor:
             "rounded-full display-none group-data-[selected=true]:bg-[transparent] bg-transparent group-data-[selected=true]:shadow-none",
           tab: "w-min",
@@ -31,18 +51,77 @@ function Step2Section() {
             "flex group-data-[selected=true]:bg-primaryBlue group-data-[selected=true]:text-white group-data-[selected=true]:border-none font-gilroy md:text-[28px] max-sm:text-[12px] text-[16px] text-black font-[500] bg-white md:px-10 px-0 md:py-6 py-3 border border-[black] rounded-full ",
         }}
       >
-        <Tab
+        {tabsContent.map((tab, index) => (
+          <Tab
+            className="bg-white px-0 rounded-full test"
+            key={index}
+            title={
+              <div
+                className={`${tab.titleClassname}`}
+                onClick={() => setSelected(tab.title)}
+              >
+                {tab.title !== selected ? (
+                  <Image
+                    src={"/images/circle.svg"}
+                    width={28}
+                    height={28}
+                    alt={"circle"}
+                    className="group-data-[selected=true]:text-white w-[28px] h-[28px] max-sm:w-[20px] max-sm:h-[20px]"
+                  />
+                ) : (
+                  <div className="flex min-w-[28px] min-h-[28px] max-sm:min-w-[20px] max-sm:min-h-[20px] items-center justify-center relative">
+                    <Image
+                      src={"/images/circle-outer.svg"}
+                      width={28}
+                      height={28}
+                      alt={"circle"}
+                      className="group-data-[selected=true]:text-white  absolute"
+                    />
+                    <Image
+                      src={"/images/circle-inner.svg"}
+                      width={20}
+                      height={20}
+                      alt={"circle"}
+                      className="group-data-[selected=true]:text-white max-md:max-w-[12px] max-md:max-h-[12px]  absolute"
+                    />
+                  </div>
+                )}
+                <h3>{tab.title}</h3>
+              </div>
+            }
+          ></Tab>
+        ))}
+        {/* <Tab
           className="bg-white px-0 rounded-full"
           key={"1"}
           title={
             <div className="flex md:gap-5 gap-2 items-center w-[180px] max-sm:w-[130px] justify-center">
-              <Image
-                src={"/images/circle.svg"}
-                width={28}
-                height={28}
-                alt={"circle"}
-                className="group-data-[selected=true]:text-white max-sm:w-[16px]"
-              />
+              {selected ? (
+                <Image
+                  src={"/images/circle.svg"}
+                  width={28}
+                  height={28}
+                  alt={"circle"}
+                  className="group-data-[selected=true]:text-white  absolute"
+                />
+              ) : (
+                <div className="flex min-w-[28px] min-h-[28px] max-sm:min-w-[20px] max-sm:min-h-[20px] items-center justify-center relative">
+                  <Image
+                    src={"/images/circle-outer.svg"}
+                    width={28}
+                    height={28}
+                    alt={"circle"}
+                    className="group-data-[selected=true]:text-white  absolute"
+                  />
+                  <Image
+                    src={"/images/circle-inner.svg"}
+                    width={20}
+                    height={20}
+                    alt={"circle"}
+                    className="group-data-[selected=true]:text-white max-sm:max-w-[12px] max-sm:max-h-[12px]  absolute"
+                  />
+                </div>
+              )}
               <h3>Link for a drink</h3>
             </div>
           }
@@ -52,13 +131,32 @@ function Step2Section() {
           key={"2"}
           title={
             <div className="flex md:gap-5 gap-2 items-center w-[180px] max-sm:w-[130px] justify-center">
-              <Image
-                src={"/images/circle.svg"}
-                width={28}
-                height={28}
-                alt={"circle"}
-                className="max-sm:w-[16px]"
-              />
+              {selected ? (
+                <Image
+                  src={"/images/circle.svg"}
+                  width={28}
+                  height={28}
+                  alt={"circle"}
+                  className="group-data-[selected=true]:text-white  absolute"
+                />
+              ) : (
+                <div className="flex min-w-[28px] min-h-[28px] max-sm:min-w-[20px] max-sm:min-h-[20px] items-center justify-center relative">
+                  <Image
+                    src={"/images/circle-outer.svg"}
+                    width={28}
+                    height={28}
+                    alt={"circle"}
+                    className="group-data-[selected=true]:text-white  absolute"
+                  />
+                  <Image
+                    src={"/images/circle-inner.svg"}
+                    width={20}
+                    height={20}
+                    alt={"circle"}
+                    className="group-data-[selected=true]:text-white max-sm:max-w-[12px] max-sm:max-h-[12px]  absolute"
+                  />
+                </div>
+              )}
               <h3>Link in the park</h3>
             </div>
           }
@@ -68,17 +166,36 @@ function Step2Section() {
           key={"3"}
           title={
             <div className="flex md:gap-5 gap-2 items-center justify-center md:w-[620px] sm:w-[400px] max-sm:w-[300px]">
-              <Image
-                src={"/images/circle.svg"}
-                width={28}
-                height={28}
-                alt={"circle"}
-                className="max-sm:w-[16px]"
-              />
+              {selected ? (
+                <Image
+                  src={"/images/circle.svg"}
+                  width={28}
+                  height={28}
+                  alt={"circle"}
+                  className="group-data-[selected=true]:text-white  absolute"
+                />
+              ) : (
+                <div className="flex min-w-[28px] min-h-[28px] max-sm:min-w-[20px] max-sm:min-h-[20px] items-center justify-center relative">
+                  <Image
+                    src={"/images/circle-outer.svg"}
+                    width={28}
+                    height={28}
+                    alt={"circle"}
+                    className="group-data-[selected=true]:text-white  absolute"
+                  />
+                  <Image
+                    src={"/images/circle-inner.svg"}
+                    width={20}
+                    height={20}
+                    alt={"circle"}
+                    className="group-data-[selected=true]:text-white max-md:max-w-[12px] max-md:max-h-[12px]  absolute"
+                  />
+                </div>
+              )}
               <h3>Link to watch the 2019 film Where’d You Go, Bernadette</h3>
             </div>
           }
-        ></Tab>
+        ></Tab> */}
       </Tabs>
       <Input
         placeholder="Enter your own idea"

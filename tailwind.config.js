@@ -16,7 +16,7 @@ module.exports = {
       },
       backgroundImage: {
           "linear-pink-gradient":
-          "linear-gradient(180deg, rgba(255, 194, 254, 0.35) 35.43%, rgba(255, 255, 255, 1) 100%)",
+          "linear-gradient(180deg, rgba(255, 194, 254, 0.35) 30.43%, rgba(255, 255, 255, 1) 100%)",
 
       }
     },

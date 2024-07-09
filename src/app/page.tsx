@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <section className="flex flex-col items-center bg-white justify-center ">
       <HeroSection />
-      <div className="flex flex-col w-full md:pt-[300px] sm:pt-[250px] pt-[150px] gap-20 items-center bg-linear-pink-gradient">
+      <div className="flex flex-col w-full md:pt-[300px] sm:pt-[250px] pt-[150px] sm:pb-20 pb-10 gap-20 items-center bg-linear-pink-gradient">
         <Step1Section />
         <Step2Section />
         <Step3Section />
